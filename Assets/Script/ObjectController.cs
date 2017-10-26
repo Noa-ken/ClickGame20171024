@@ -8,15 +8,16 @@ public class ObjectController : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(dir);
     }
 
-    private void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
     {
+        Debug.Log("Hit");
         GetComponent<Rigidbody>().isKinematic = true;
     }
 
     // Use this for initialization
     void Start()
     {
-        Shoot(new Vector3(0, 200, 2000));
+        // Shoot(new Vector3(0, 200, 2000));
     }
 
     // Update is called once per frame
